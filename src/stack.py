@@ -13,6 +13,10 @@ class Node:
     # def __repr__(self):
     #     return f'class Node("DATA:{str(self.data)}")'
 
+    def __str__(self):
+        if self.next_node:
+            return f"{self.data}\n{self.next_node}"
+        return f"{self.data}"
 
 class Stack:
     """Класс для стека"""
@@ -20,6 +24,10 @@ class Stack:
     def __init__(self):
         """Конструктор класса Stack"""
         self.top = None
+
+    def __str__(self):
+        if self.top: return str(self.top)
+        else: return ""
 
     def push(self, data):
         """
