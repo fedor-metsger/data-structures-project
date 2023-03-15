@@ -38,12 +38,6 @@ class Queue:
     def __str__(self):
         if self.head: return str(self.head)
         else: return ""
-        # n = self.head
-        # lst = []
-        # while n:
-        #     lst.append(n.data)
-        #     n = n.next_node
-        # return '\n'.join(lst)
 
     def dequeue(self):
         """

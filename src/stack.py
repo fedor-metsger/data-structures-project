@@ -10,9 +10,6 @@ class Node:
         self.data = data
         self.next_node = next_node
 
-    # def __repr__(self):
-    #     return f'class Node("DATA:{str(self.data)}")'
-
     def __str__(self):
         if self.next_node:
             return f"{self.data}\n{self.next_node}"
