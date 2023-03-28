@@ -43,3 +43,17 @@ class TestLinkedList(unittest.TestCase):
         node = Node('data1', None)
         self.assertEqual(node.data, 'data1')
         self.assertEqual(node.next_node, None)
+
+    def test_to_list(self):
+        llist = LinkedList()
+        llist.insert_beginning("data1")
+        llist.insert_beginning("data2")
+        llist.insert_beginning("data3")
+        self.assertEqual(llist.to_list(), ["data3", "data2", "data1"])
+
+    def test_get_data_by_id(self):
+        llist = LinkedList()
+        llist.insert_beginning([1, "data1"])
+        llist.insert_beginning("data2")
+        llist.insert_beginning({"id": 3, "data": "data3"})
+        self.assertEqual(llist.get_data_by_id(3), {"id": 3, "data": "data3"})
